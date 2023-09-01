@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+
+  backend:
+    image: prova-felipe
+    restart: always
+    network_mode: host
+    ports:
+      - 8080:8080
+    container_name: prova-felipe-container
+
+  frontend:
+    image: prova-felipe-frontend
+    restart: always
+    network_mode: host
+    expose:
+      - "5000"
+    ports:
+      - 8181:8181
+    container_name: prova-felipe-frontend-container
